@@ -1,5 +1,3 @@
-console.log('hello');
-
 //QUESTIONS ARRAY
 //simple regex expression for anystring@anystring.anystring
 const questions = [
@@ -63,7 +61,7 @@ function hideQuestion() {
 	inputGroup.style.border = null;
 }
 
-function errorShakeTransform(x, y) {
+function ShakeTransform(x, y) {
 	formBox.style.transform = `translate(${x}px, ${y}px)`;
 }
 
@@ -82,12 +80,36 @@ function inputFail() {
 
 	//repeat the shake transform
 	for(let i = 0; i < 6; i++) {
-		setTimeout(errorShakeTransform, shakeTime * i, ((i % 2) * 2 - 1) * 20, 0);
-		setTimeout(errorShakeTransform, shakeTime * 6, 0, 0);
+		setTimeout(ShakeTransform, shakeTime * i, ((i % 2) * 2 - 1) * 20, 0);
+		setTimeout(ShakeTransform, shakeTime * 6, 0, 0);
 		inputField.focus();
 	}
 }
 
 function inputPass() {
+	//move to the next question
+	formBox.className = ''; //this would remove the error class
+	setTimeout(ShakeTransform, shakeTime * 0, 0, 10);
+	setTimeout(ShakeTransform, shakeTime * 1, 0, 0);
 
+	//change the question
+	position++;
+
+	//hide current question, get next
+	if (questions[position]) {
+		hideQuestion();
+		getQuestion();
+	} else {
+		//if no more questions
+		hideQuestion();
+		formBox.className = 'close';
+		progress.style.width = '100%';
+
+		//complete form
+		formComplete();
+	}
+}
+
+function formComplete() {
+	console.log("form complete");
 }
