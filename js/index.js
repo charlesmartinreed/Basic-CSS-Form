@@ -24,6 +24,11 @@ const progress = document.querySelector('#progress-bar');
 //EVENTS
 document.addEventListener('DOMContentLoaded', getQuestion);
 nextBtn.addEventListener('click', validate); //validate BEFORE moving to next question
+inputField.addEventListener('keyup', e => {
+	if(e.keyCode == 13) {
+		validate();
+	}
+}); //if the enter key is pressed, validate input
 
 //FUNCTIONS
 function getQuestion() {
