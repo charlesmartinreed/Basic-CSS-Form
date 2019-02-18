@@ -97,6 +97,9 @@ function inputPass() {
 	setTimeout(ShakeTransform, shakeTime * 0, 0, 10);
 	setTimeout(ShakeTransform, shakeTime * 1, 0, 0);
 
+	//store answer in array
+	questions[position].answer = inputField.value;
+
 	//change the question
 	position++;
 
@@ -116,5 +119,13 @@ function inputPass() {
 }
 
 function formComplete() {
-	console.log("form complete");
+	console.log(questions);
+	//show the h1 element with the class of 'end'
+	const h1 = document.createElement('h1');
+	h1.classList.add('end');
+	h1.appendChild(document.createTextNode(`Thanks ${questions[0].answer}! You are now registered and should receive an email shortly.`))
+	setTimeout(() => {
+		formBox.parentElement.appendChild(h1);
+		setTimeout(() => h1.style.opacity = 1, 50);
+	}, 1000);
 }

@@ -9,6 +9,13 @@ h1.logo {
   font-family: 'Pacifico', cursive;
   font-size: 4rem; }
 
+h1.end {
+  position: relative;
+  color: #FFF;
+  opacity: 0;
+  -webkit-transition: 0.8 ease-in-out;
+  transition: 0.8 ease-in-out; }
+
 #container {
   height: 100vh;
   display: -webkit-box;
