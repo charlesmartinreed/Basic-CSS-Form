@@ -1,0 +1,25 @@
+{
+  "name": "css-form-with-animations",
+  "version": "1.0.0",
+  "description": "A basic form in HTML/CSS with some nifty animations.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/charlesmartinreed/Basic-CSS-Form.git"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "sass",
+    "form"
+  ],
+  "author": "Charles Martin Reed",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/charlesmartinreed/Basic-CSS-Form/issues"
+  },
+  "homepage": "https://github.com/charlesmartinreed/Basic-CSS-Form#readme"
+}
