@@ -79,6 +79,13 @@ function validate() {
 function inputFail() {
 	//trigger the failed animation, error class
 	formBox.className = 'error';
+
+	//repeat the shake transform
+	for(let i = 0; i < 6; i++) {
+		setTimeout(errorShakeTransform, shakeTime * i, ((i % 2) * 2 - 1) * 20, 0);
+		setTimeout(errorShakeTransform, shakeTime * 6, 0, 0);
+		inputField.focus();
+	}
 }
 
 function inputPass() {
