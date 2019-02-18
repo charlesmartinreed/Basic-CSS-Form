@@ -125,3 +125,7 @@ h1.logo {
 
 .error #next-btn {
   color: #FF2D26; }
+
+@media (max-width: 600px) {
+  #form-box {
+    width: 80%; } }

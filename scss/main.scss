@@ -177,3 +177,9 @@ h1.logo {
 		color: $error-color;
 	}
 }
+
+@media(max-width: 600px) {
+	#form-box {
+		width: 80%;
+	}
+}
