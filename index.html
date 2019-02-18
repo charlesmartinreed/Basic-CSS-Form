@@ -13,9 +13,17 @@
 				<h1 class="logo">Fancy Form</h1>
 				<div id="form-box">
 					<i id="prev-btn" class="fas fa-arrow-left"></i>
-					<i id="prev-btn" class="fas fa-arrow-right"></i>
+					<i id="next-btn" class="fas fa-arrow-right"></i>
+					<div id="input-group">
+						<!-- input type will be dynamically generated in JS depending -->
+						<input id="input-field" required>
+						<!-- Represents the question presented to user -->
+						<label id="input-label">Enter Your First Name</label>
+						<div id="input-progress"></div>
+					</div>
+					<div id="progress-bar"></div>
 				</div>
 			</div>
-			<script type="text/javascript" src="js/index.js"></script>
+			<script src="js/index.js"></script>
 		</body>
 	</html>
